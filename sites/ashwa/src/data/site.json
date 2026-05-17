@@ -4,40 +4,95 @@
   "homepage_content": "hem",
   "tagline": "Allt om ashwagandha — fördelar, dosering och vetenskap bakom Indiens mest älskade adaptogen.",
   "nav": [
-    { "label": "Hem", "href": "/" },
-    { "label": "Blogg", "href": "/" },
-    { "label": "Om oss", "href": "/om-oss" },
-    { "label": "Kontakt", "href": "/kontakta-oss" }
+    {
+      "label": "Hem",
+      "href": "/"
+    },
+    {
+      "label": "Blogg",
+      "href": "/"
+    },
+    {
+      "label": "Om oss",
+      "href": "/om-oss"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/kontakta-oss"
+    }
   ],
   "hero": {
     "eyebrow": "ADAPTOGENET FRÅN INDIEN",
     "headline": "Ashwagandha Gummies i God & Smidig Form",
     "lead": "Våra ashwagandha gummies är skapade för att vara enkla att ta dagligen — utan att kompromissa med kvalitet eller upptag av den välkända KSM-66-extrakten.",
-    "cta_primary": { "label": "Köp nu", "href": "https://habitual.se/products/ashwagandha-gummies" },
-    "cta_secondary": { "label": "Hur fungerar det?", "href": "#hur-det-fungerar" },
-    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Ashwagandha_460d9f52-03c2-473f-823f-afd257d96a86.png?v=1774196334",
+    "cta_primary": {
+      "label": "Köp nu",
+      "href": "https://habitual.se/products/ashwagandha-gummies"
+    },
+    "cta_secondary": {
+      "label": "Hur fungerar det?",
+      "href": "#hur-det-fungerar"
+    },
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Ash-3.png?v=1776642397",
     "image_alt": "Habitual Ashwagandha Gummies burk"
   },
   "stats": [
-    { "value": "600", "unit": "MG", "label": "KSM-66 per dos" },
-    { "value": "60", "unit": "GUMMIES", "label": "Per burk" },
-    { "value": "1-2", "unit": "DAGLIGEN", "label": "Rekommenderad dos" }
+    {
+      "value": "600",
+      "unit": "MG",
+      "label": "KSM-66 per dos"
+    },
+    {
+      "value": "60",
+      "unit": "GUMMIES",
+      "label": "Per burk"
+    },
+    {
+      "value": "1-2",
+      "unit": "DAGLIGEN",
+      "label": "Rekommenderad dos"
+    }
   ],
   "features_eyebrow": "FÖRDELARNA",
   "features_heading": "Varför Ashwagandha?",
   "features_lead": "Ta ashwagandha dagligen för att uppleva resultat som:",
   "features": [
-    { "icon": "🧘", "title": "Mindre stress", "body": "Sänker kortisolnivåer och hjälper kroppen att hantera vardagens påfrestningar." },
-    { "icon": "😴", "title": "Bättre sömn", "body": "Stödjer en djupare och mer återhämtande sömn enligt flera kliniska studier." },
-    { "icon": "🎯", "title": "Ökat fokus", "body": "Förbättrar koncentration och kognitiv funktion, särskilt under press." },
-    { "icon": "🛡️", "title": "Stärkt immunförsvar", "body": "Bidrar till en starkare grundhälsa och bättre immunfunktion över tid." }
+    {
+      "icon": "🧘",
+      "title": "Mindre stress",
+      "body": "Sänker kortisolnivåer och hjälper kroppen att hantera vardagens påfrestningar."
+    },
+    {
+      "icon": "😴",
+      "title": "Bättre sömn",
+      "body": "Stödjer en djupare och mer återhämtande sömn enligt flera kliniska studier."
+    },
+    {
+      "icon": "🎯",
+      "title": "Ökat fokus",
+      "body": "Förbättrar koncentration och kognitiv funktion, särskilt under press."
+    },
+    {
+      "icon": "🛡️",
+      "title": "Stärkt immunförsvar",
+      "body": "Bidrar till en starkare grundhälsa och bättre immunfunktion över tid."
+    }
   ],
   "research_eyebrow": "FORSKNINGEN BAKOM ASHWAGANDHA",
   "research_heading": "Världens mest studerade adaptogen",
   "research_lead": "Ashwagandha har använts i ayurvedisk medicin i över 3 000 år. Modern forskning bekräftar det traditionen länge påstått.",
   "research_stats": [
-    { "value": "75%", "text": "av deltagarna upplevde minskad upplevd stress efter 60 dagars dagligt intag av KSM-66 (PMID: 31728244)." },
-    { "value": "32%", "text": "lägre kortisol uppmätt i kliniska studier — den största stress-effekten av någon ört enligt meta-analys." },
-    { "value": "3000+", "text": "års användning i ayurveda gör ashwagandha till en av världens mest validerade örter." }
+    {
+      "value": "75%",
+      "text": "av deltagarna upplevde minskad upplevd stress efter 60 dagars dagligt intag av KSM-66 (PMID: 31728244)."
+    },
+    {
+      "value": "32%",
+      "text": "lägre kortisol uppmätt i kliniska studier — den största stress-effekten av någon ört enligt meta-analys."
+    },
+    {
+      "value": "3000+",
+      "text": "års användning i ayurveda gör ashwagandha till en av världens mest validerade örter."
+    }
   ]
 }

@@ -4,40 +4,95 @@
   "homepage_content": "hem",
   "tagline": "Allt om sea moss — 92 mineraler från havet i en daglig gummy.",
   "nav": [
-    { "label": "Hem", "href": "/" },
-    { "label": "Blogg", "href": "/" },
-    { "label": "Om oss", "href": "/om-oss" },
-    { "label": "Kontakt", "href": "/kontakta-oss" }
+    {
+      "label": "Hem",
+      "href": "/"
+    },
+    {
+      "label": "Blogg",
+      "href": "/"
+    },
+    {
+      "label": "Om oss",
+      "href": "/om-oss"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/kontakta-oss"
+    }
   ],
   "hero": {
     "eyebrow": "92 MINERALER FRÅN HAVET",
     "headline": "Irish Sea Moss Gummies i God & Smidig Form",
     "lead": "Våra sea moss gummies är skapade för att vara enkla att ta dagligen — naturlig källa till jod, järn, magnesium och 89 andra mineraler kroppen behöver.",
-    "cta_primary": { "label": "Köp nu", "href": "https://habitual.se/products/sea-moss-gummies" },
-    "cta_secondary": { "label": "Hur fungerar det?", "href": "#hur-det-fungerar" },
-    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/SeaMossColorBackground.png?v=1775062061",
+    "cta_primary": {
+      "label": "Köp nu",
+      "href": "https://habitual.se/products/sea-moss-gummies"
+    },
+    "cta_secondary": {
+      "label": "Hur fungerar det?",
+      "href": "#hur-det-fungerar"
+    },
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/SeaMossENKEL.png?v=1776642901",
     "image_alt": "Habitual Irish Sea Moss Gummies burk"
   },
   "stats": [
-    { "value": "1000", "unit": "MG", "label": "Sea moss-extrakt per dos" },
-    { "value": "60", "unit": "GUMMIES", "label": "Per burk" },
-    { "value": "92", "unit": "MINERALER", "label": "Naturligt innehåll" }
+    {
+      "value": "1000",
+      "unit": "MG",
+      "label": "Sea moss-extrakt per dos"
+    },
+    {
+      "value": "60",
+      "unit": "GUMMIES",
+      "label": "Per burk"
+    },
+    {
+      "value": "92",
+      "unit": "MINERALER",
+      "label": "Naturligt innehåll"
+    }
   ],
   "features_eyebrow": "FÖRDELARNA",
   "features_heading": "Varför Sea Moss?",
   "features_lead": "Ta sea moss dagligen för att uppleva resultat som:",
   "features": [
-    { "icon": "🛡️", "title": "Stärkt immunförsvar", "body": "Rik på antioxidanter och jod som stödjer kroppens naturliga försvar." },
-    { "icon": "✨", "title": "Friskare hud", "body": "Kollagenstödjande mineraler ger spänstigare, klarare hud över tid." },
-    { "icon": "⚡", "title": "Mer energi", "body": "Järn och B-vitaminer från havet motverkar trötthet och ökar uthålligheten." },
-    { "icon": "🌿", "title": "Bättre matsmältning", "body": "Naturliga prebiotika och fibrer stödjer en frisk tarmflora." }
+    {
+      "icon": "🛡️",
+      "title": "Stärkt immunförsvar",
+      "body": "Rik på antioxidanter och jod som stödjer kroppens naturliga försvar."
+    },
+    {
+      "icon": "✨",
+      "title": "Friskare hud",
+      "body": "Kollagenstödjande mineraler ger spänstigare, klarare hud över tid."
+    },
+    {
+      "icon": "⚡",
+      "title": "Mer energi",
+      "body": "Järn och B-vitaminer från havet motverkar trötthet och ökar uthålligheten."
+    },
+    {
+      "icon": "🌿",
+      "title": "Bättre matsmältning",
+      "body": "Naturliga prebiotika och fibrer stödjer en frisk tarmflora."
+    }
   ],
   "research_eyebrow": "FORSKNINGEN BAKOM SEA MOSS",
   "research_heading": "Havets superfood — i 1000 år",
   "research_lead": "Irish sea moss har använts på Irland sedan medeltiden. Modern forskning bekräftar dess unika mineral- och näringsprofil.",
   "research_stats": [
-    { "value": "92", "text": "av kroppens 102 mineraler finns naturligt i Irish sea moss — fler än någon annan landväxt." },
-    { "value": "47%", "text": "av befolkningen har låga jodnivåer enligt EFSA. Sea moss är en naturlig jodkälla." },
-    { "value": "1000+", "text": "års dokumenterad användning i irländsk folkmedicin för immunförsvar och hudhälsa." }
+    {
+      "value": "92",
+      "text": "av kroppens 102 mineraler finns naturligt i Irish sea moss — fler än någon annan landväxt."
+    },
+    {
+      "value": "47%",
+      "text": "av befolkningen har låga jodnivåer enligt EFSA. Sea moss är en naturlig jodkälla."
+    },
+    {
+      "value": "1000+",
+      "text": "års dokumenterad användning i irländsk folkmedicin för immunförsvar och hudhälsa."
+    }
   ]
 }

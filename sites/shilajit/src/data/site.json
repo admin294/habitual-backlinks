@@ -4,40 +4,95 @@
   "homepage_content": "hem",
   "tagline": "Allt om shilajit — bergsharts från Himalaya, fulvinsyror och varför det blivit årets supplement.",
   "nav": [
-    { "label": "Hem", "href": "/" },
-    { "label": "Blogg", "href": "/" },
-    { "label": "Om oss", "href": "/om-oss" },
-    { "label": "Kontakt", "href": "/kontakta-oss" }
+    {
+      "label": "Hem",
+      "href": "/"
+    },
+    {
+      "label": "Blogg",
+      "href": "/"
+    },
+    {
+      "label": "Om oss",
+      "href": "/om-oss"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/kontakta-oss"
+    }
   ],
   "hero": {
     "eyebrow": "BERGSHARTS FRÅN HIMALAYA",
     "headline": "Shilajit Himalayan Gummies i God & Smidig Form",
     "lead": "Våra shilajit gummies är skapade för att vara enkla att ta dagligen — naturlig källa till fulvinsyror och 84 spårmineraler direkt från Himalayabergen.",
-    "cta_primary": { "label": "Köp nu", "href": "https://habitual.se/products/shilajit-gummies" },
-    "cta_secondary": { "label": "Hur fungerar det?", "href": "#hur-det-fungerar" },
-    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Shilajit_ColorBackground.png?v=1774196013",
+    "cta_primary": {
+      "label": "Köp nu",
+      "href": "https://habitual.se/products/shilajit-gummies"
+    },
+    "cta_secondary": {
+      "label": "Hur fungerar det?",
+      "href": "#hur-det-fungerar"
+    },
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/ShilajitENKEL.png?v=1776642757",
     "image_alt": "Habitual Shilajit Himalayan Gummies burk"
   },
   "stats": [
-    { "value": "500", "unit": "MG", "label": "Shilajit-extrakt per dos" },
-    { "value": "60", "unit": "GUMMIES", "label": "Per burk" },
-    { "value": "84", "unit": "MINERALER", "label": "Naturligt innehåll" }
+    {
+      "value": "500",
+      "unit": "MG",
+      "label": "Shilajit-extrakt per dos"
+    },
+    {
+      "value": "60",
+      "unit": "GUMMIES",
+      "label": "Per burk"
+    },
+    {
+      "value": "84",
+      "unit": "MINERALER",
+      "label": "Naturligt innehåll"
+    }
   ],
   "features_eyebrow": "FÖRDELARNA",
   "features_heading": "Varför Shilajit?",
   "features_lead": "Ta shilajit dagligen för att uppleva resultat som:",
   "features": [
-    { "icon": "⚡", "title": "Mer energi", "body": "Stödjer cellernas mitokondrier och naturlig ATP-produktion för uthållig energi." },
-    { "icon": "💪", "title": "Bättre uthållighet", "body": "Förbättrar fysisk prestation och återhämtning enligt studier på aktiva." },
-    { "icon": "🧠", "title": "Skarpare fokus", "body": "Fulvinsyror stödjer hjärnans funktion och kognitiv prestation." },
-    { "icon": "🛡️", "title": "Stärkt grundhälsa", "body": "Rik på spårmineraler och antioxidanter som bidrar till långsiktig hälsa." }
+    {
+      "icon": "⚡",
+      "title": "Mer energi",
+      "body": "Stödjer cellernas mitokondrier och naturlig ATP-produktion för uthållig energi."
+    },
+    {
+      "icon": "💪",
+      "title": "Bättre uthållighet",
+      "body": "Förbättrar fysisk prestation och återhämtning enligt studier på aktiva."
+    },
+    {
+      "icon": "🧠",
+      "title": "Skarpare fokus",
+      "body": "Fulvinsyror stödjer hjärnans funktion och kognitiv prestation."
+    },
+    {
+      "icon": "🛡️",
+      "title": "Stärkt grundhälsa",
+      "body": "Rik på spårmineraler och antioxidanter som bidrar till långsiktig hälsa."
+    }
   ],
   "research_eyebrow": "FORSKNINGEN BAKOM SHILAJIT",
   "research_heading": "Himalayas hemlighet — bevisad av forskning",
   "research_lead": "Shilajit har använts i ayurveda i tusentals år. Modern forskning bekräftar dess unika sammansättning av fulvinsyror och mineraler.",
   "research_stats": [
-    { "value": "84", "text": "spårmineraler i bioaktiv form — fler än någon annan naturlig källa enligt analyser." },
-    { "value": "20%", "text": "ökad fysisk uthållighet uppmätt i kontrollerade studier (PMID: 26395129)." },
-    { "value": "3000+", "text": "års användning i ayurvedisk tradition gör shilajit till en av världens mest beprövade örter." }
+    {
+      "value": "84",
+      "text": "spårmineraler i bioaktiv form — fler än någon annan naturlig källa enligt analyser."
+    },
+    {
+      "value": "20%",
+      "text": "ökad fysisk uthållighet uppmätt i kontrollerade studier (PMID: 26395129)."
+    },
+    {
+      "value": "3000+",
+      "text": "års användning i ayurvedisk tradition gör shilajit till en av världens mest beprövade örter."
+    }
   ]
 }
