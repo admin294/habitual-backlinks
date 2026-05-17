@@ -5,11 +5,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const homepageSlug = siteConfig.homepage_content;
-const pageRaw = fs.readFileSync(path.resolve(`src/content/pages/${homepageSlug}.md`), 'utf-8');
-const pageTitle = pageRaw.match(/title:\s*"(.+?)"/)?.[1] || siteConfig.brand;
-const pageBody = pageRaw.split(/^---$/m).slice(2).join('---').trim();
+const pagePath = path.resolve(`src/content/pages/${homepageSlug}.md`);
+let pageBody = '';
+if (fs.existsSync(pagePath)) {
+  const pageRaw = fs.readFileSync(pagePath, 'utf-8');
+  pageBody = pageRaw.split(/^---$/m).slice(2).join('---').trim();
+}
 
-// Posts listing
 const postsDir = path.resolve('src/content/posts');
 const posts = fs.existsSync(postsDir) ? fs.readdirSync(postsDir).map((file) => {
   const raw = fs.readFileSync(path.join(postsDir, file), 'utf-8');
@@ -21,22 +23,43 @@ const posts = fs.existsSync(postsDir) ? fs.readdirSync(postsDir).map((file) => {
     excerpt: fm.match(/excerpt:\s*"(.+?)"/)?.[1] || '',
   };
 }).sort((a, b) => b.date.localeCompare(a.date)) : [];
+
+const formatDate = (d: string) => d ? new Date(d).toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
 ---
 <Base title={`${siteConfig.brand} — ${siteConfig.tagline}`} description={siteConfig.tagline} slug="/">
-  <article set:html={pageBody} />
+  <section class="hero">
+    <div class="container-narrow">
+      <h1>{siteConfig.brand}</h1>
+      <p class="lead">{siteConfig.tagline}</p>
+    </div>
+  </section>
+
+  {pageBody && (
+    <section class="container-narrow article-wrapper">
+      <article set:html={pageBody} />
+    </section>
+  )}
+
   {posts.length > 0 && (
-    <>
-      <h2>Senaste artiklarna</h2>
-      <ul class="post-list">
+    <section class="container">
+      <div class="section-heading">
+        <h2>Senaste artiklarna</h2>
+        <p>Allt vi har skrivit om {siteConfig.brand.toLowerCase()}</p>
+      </div>
+      <ul class="post-grid">
         {posts.map((p) => (
-          <li>
+          <li class="post-card">
             <a href={`/${p.slug}`}>
-              <span class="title">{p.title}</span>
-              <span class="excerpt">{p.excerpt}</span>
+              <h3 class="card-title">{p.title}</h3>
+              <p class="card-excerpt">{p.excerpt}</p>
+              <div class="card-meta">
+                {p.date && <time>{formatDate(p.date)}</time>}
+                <span class="read-more"> Läs mer →</span>
+              </div>
             </a>
           </li>
         ))}
       </ul>
-    </>
+    </section>
   )}
 </Base>

@@ -7,8 +7,7 @@ import path from 'node:path';
 export async function getStaticPaths() {
   const { default: cfg } = await import('../data/site.json');
   const items = [];
-  
-  // Pages (excluding homepage)
+
   const pagesDir = path.resolve('src/content/pages');
   if (fs.existsSync(pagesDir)) {
     for (const file of fs.readdirSync(pagesDir)) {
@@ -21,8 +20,7 @@ export async function getStaticPaths() {
       items.push({ params: { slug }, props: { title, body, kind: 'page', date: '', excerpt: '' } });
     }
   }
-  
-  // Posts
+
   const postsDir = path.resolve('src/content/posts');
   if (fs.existsSync(postsDir)) {
     for (const file of fs.readdirSync(postsDir)) {
@@ -36,18 +34,29 @@ export async function getStaticPaths() {
       items.push({ params: { slug }, props: { title, body, kind: 'post', date, excerpt } });
     }
   }
-  
+
   return items;
 }
 
 const { title, body, kind, date, excerpt } = Astro.props;
-const dateStr = date ? new Date(date).toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+const formatDate = (d) => d ? new Date(d).toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+const dateStr = formatDate(date);
 const slug = Astro.params.slug;
+
+// Read time estimate (200 wpm)
+const wordCount = body.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
+const readTime = Math.max(1, Math.round(wordCount / 200));
 ---
 <Base title={`${title} — ${siteConfig.brand}`} description={excerpt || siteConfig.tagline} slug={`/${slug}`}>
-  <h1 set:html={title} />
-  {kind === 'post' && dateStr && <p class="post-meta">{dateStr}</p>}
-  <article set:html={body} />
-  <hr style="margin: 3rem 0; border: none; border-top: 1px solid #ead9c4;" />
-  <p><a href="/">← Tillbaka till startsidan</a></p>
+  <article class="container-narrow article-wrapper" style="padding-top: 3.5rem;">
+    <h1 set:html={title} />
+    {kind === 'post' && (
+      <p class="post-meta">
+        {dateStr && <><time>{dateStr}</time> · </>}
+        <span>{readTime} min läsning</span>
+      </p>
+    )}
+    <div set:html={body} />
+    <a href="/" class="back-link">← Tillbaka till startsidan</a>
+  </article>
 </Base>
