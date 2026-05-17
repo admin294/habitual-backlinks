@@ -19,7 +19,7 @@ const posts = fs.readdirSync(postsDir).map((file) => {
   return { title, slug, date, excerpt };
 }).sort((a, b) => b.date.localeCompare(a.date));
 ---
-<Base title="Shilajit Sverige Sverige — Allt om Ashwagandha" slug="/">
+<Base title="Shilajit Sverige — Allt om Shilajit" slug="/">
   <article set:html={hemBody} />
   <h2>Senaste artiklarna</h2>
   <ul class="post-list">
