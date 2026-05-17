@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Load hem page content
+const hemRaw = fs.readFileSync(path.resolve('src/content/pages/hem.md'), 'utf-8');
+const hemBody = hemRaw.split(/^---$/m).slice(2).join('---').trim();
+
+// Load posts
+const postsDir = path.resolve('src/content/posts');
+const posts = fs.readdirSync(postsDir).map((file) => {
+  const raw = fs.readFileSync(path.join(postsDir, file), 'utf-8');
+  const fm = raw.match(/^---\n([\s\S]*?)\n---/)?.[1] || '';
+  const title = fm.match(/title:\s*"(.+?)"/)?.[1] || '';
+  const slug = fm.match(/slug:\s*"(.+?)"/)?.[1] || '';
+  const date = fm.match(/date:\s*"(.+?)"/)?.[1] || '';
+  const excerpt = fm.match(/excerpt:\s*"(.+?)"/)?.[1] || '';
+  return { title, slug, date, excerpt };
+}).sort((a, b) => b.date.localeCompare(a.date));
+---
+<Base title="Ashwagandha Gummies Sverige — Allt om Ashwagandha" slug="/">
+  <article set:html={hemBody} />
+  <h2>Senaste artiklarna</h2>
+  <ul class="post-list">
+    {posts.map((p) => (
+      <li>
+        <a href={`/${p.slug}`}>
+          <span class="title">{p.title}</span>
+          <span class="excerpt">{p.excerpt}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

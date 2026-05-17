@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function getStaticPaths() {
+  const postsDir = path.resolve('src/content/posts');
+  return fs.readdirSync(postsDir).map((file) => {
+    const raw = fs.readFileSync(path.join(postsDir, file), 'utf-8');
+    const fm = raw.match(/^---\n([\s\S]*?)\n---/)?.[1] || '';
+    const title = fm.match(/title:\s*"(.+?)"/)?.[1] || '';
+    const slug = fm.match(/slug:\s*"(.+?)"/)?.[1] || file.replace(/\.md$/, '');
+    const date = fm.match(/date:\s*"(.+?)"/)?.[1] || '';
+    const excerpt = fm.match(/excerpt:\s*"(.+?)"/)?.[1] || '';
+    const body = raw.split(/^---$/m).slice(2).join('---').trim();
+    return { params: { slug }, props: { title, date, excerpt, body } };
+  });
+}
+
+const { title, date, excerpt, body } = Astro.props;
+const dateStr = date ? new Date(date).toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+const slug = Astro.params.slug;
+---
+<Base title={`${title} — Ashwagandha Gummies`} description={excerpt} slug={`/${slug}`}>
+  <h1 set:html={title} />
+  {dateStr && <p class="post-meta">{dateStr}</p>}
+  <article set:html={body} />
+  <hr style="margin: 3rem 0; border: none; border-top: 1px solid #ead9c4;" />
+  <p><a href="/">← Tillbaka till startsidan</a></p>
+</Base>
