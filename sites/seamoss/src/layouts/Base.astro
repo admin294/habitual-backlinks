@@ -1,10 +1,11 @@
 ---
+import siteConfig from '../data/site.json';
 interface Props {
   title: string;
   description?: string;
   slug?: string;
 }
-const { title, description = 'Allt om sea moss — fördelar, dosering och vetenskap.', slug = '' } = Astro.props;
+const { title, description = siteConfig.tagline, slug = '' } = Astro.props;
 const canonical = new URL(slug, Astro.site).toString();
 ---
 <!doctype html>
@@ -52,16 +53,19 @@ const canonical = new URL(slug, Astro.site).toString();
 <body>
   <header>
     <div class="container">
-      <a class="brand" href="/">Sea Moss Gummies</a>
+      <a class="brand" href="/">{siteConfig.brand}</a>
       <nav>
-        <a href="/om-oss">Om oss</a>
-        <a href="/kontakta-oss">Kontakt</a>
+        {siteConfig.nav.map(({ label, href }) => (
+          <a href={href}>{label}</a>
+        ))}
       </nav>
     </div>
   </header>
   <main class="container"><slot /></main>
   <footer>
-    <div class="container">© 2026 Sea Moss Gummies · <a href="/om-oss">Om</a> · <a href="/kontakta-oss">Kontakt</a></div>
+    <div class="container">© 2026 {siteConfig.brand} · {siteConfig.nav.map(({ label, href }, i) => (
+      <>{i > 0 && ' · '}<a href={href}>{label}</a></>
+    ))}</div>
   </footer>
 </body>
 </html>

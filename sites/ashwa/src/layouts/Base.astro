@@ -1,10 +1,11 @@
 ---
+import siteConfig from '../data/site.json';
 interface Props {
   title: string;
   description?: string;
   slug?: string;
 }
-const { title, description = 'Allt om Ashwagandha — gummies, dosering, biverkningar och fördelar.', slug = '' } = Astro.props;
+const { title, description = siteConfig.tagline, slug = '' } = Astro.props;
 const canonical = new URL(slug, Astro.site).toString();
 ---
 <!doctype html>
@@ -21,20 +22,12 @@ const canonical = new URL(slug, Astro.site).toString();
       --color-text: #2a1f15;
       --color-accent: #9c6a2f;
       --color-muted: #6b5d4d;
-      --color-card: #ffffff;
       --font-body: 'Georgia', serif;
       --font-head: 'Helvetica Neue', Arial, sans-serif;
       --max-width: 720px;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: var(--font-body);
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      font-size: 18px;
-    }
+    body { margin: 0; font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.6; font-size: 18px; }
     .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem; }
     header { background: #fff; border-bottom: 1px solid #ead9c4; padding: 1rem 0; margin-bottom: 2rem; }
     header .container { display: flex; justify-content: space-between; align-items: center; }
@@ -55,29 +48,24 @@ const canonical = new URL(slug, Astro.site).toString();
     .post-list .title { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; display: block; }
     .post-list .excerpt { color: var(--color-muted); font-size: 0.95rem; }
     footer { margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #ead9c4; color: var(--color-muted); font-size: 0.85rem; text-align: center; }
-    @media (max-width: 600px) {
-      body { font-size: 17px; }
-      nav a { margin-left: 0.75rem; font-size: 0.85rem; }
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <a class="brand" href="/">Ashwagandha Gummies</a>
+      <a class="brand" href="/">{siteConfig.brand}</a>
       <nav>
-        <a href="/om-oss">Om oss</a>
-        <a href="/kontakta-oss">Kontakt</a>
+        {siteConfig.nav.map(({ label, href }) => (
+          <a href={href}>{label}</a>
+        ))}
       </nav>
     </div>
   </header>
-  <main class="container">
-    <slot />
-  </main>
+  <main class="container"><slot /></main>
   <footer>
-    <div class="container">
-      © 2026 Ashwagandha Gummies Sverige · <a href="/om-oss">Om</a> · <a href="/kontakta-oss">Kontakt</a>
-    </div>
+    <div class="container">© 2026 {siteConfig.brand} · {siteConfig.nav.map(({ label, href }, i) => (
+      <>{i > 0 && ' · '}<a href={href}>{label}</a></>
+    ))}</div>
   </footer>
 </body>
 </html>

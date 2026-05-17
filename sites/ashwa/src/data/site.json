@@ -1,0 +1,11 @@
+{
+  "brand": "Ashwagandha Gummies",
+  "domain": "ashwagandhagummies.se",
+  "homepage_content": "hem",
+  "blog_listing_slug": null,
+  "tagline": "Allt om Ashwagandha — gummies, dosering, biverkningar och fördelar.",
+  "nav": [
+    { "label": "Om oss", "href": "/om-oss" },
+    { "label": "Kontakt", "href": "/kontakta-oss" }
+  ]
+}
