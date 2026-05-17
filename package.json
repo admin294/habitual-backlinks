@@ -1,0 +1,13 @@
+{
+  "name": "habitual-backlinks",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["sites/*"],
+  "scripts": {
+    "build:all": "npm run build --workspaces --if-present",
+    "build:ashwa": "npm run build -w sites/ashwa",
+    "build:seamoss": "npm run build -w sites/seamoss",
+    "build:shilajit": "npm run build -w sites/shilajit",
+    "build:kreatin": "npm run build -w sites/kreatin"
+  }
+}
