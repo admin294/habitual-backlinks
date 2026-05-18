@@ -2,6 +2,65 @@
   "brand": "Kreatin Gummies",
   "domain": "kreatingummies.se",
   "homepage_content": "kreatin-monohydrat-som-godis-tuggisar",
-  "tagline": "Kreatin i gummies — dosering, vetenskap och produktguide.",
-  "nav": [{"label":"Blogg","href":"/blogg"},{"label":"Om oss","href":"/om-oss"},{"label":"Kontakt","href":"/kontakt"}]
+  "tagline": "Allt om kreatin monohydrat i gummies — dosering, vetenskap och produktguide.",
+  "logo": null,
+  "favicon": null,
+  "nav": [
+    { "label": "Hem", "href": "/" },
+    { "label": "Blogg", "href": "/blogg" },
+    { "label": "Om oss", "href": "/om-oss" },
+    { "label": "Kontakt", "href": "/kontakt" }
+  ],
+  "hero": {
+    "eyebrow": "GODA KOSTTILLSKOTTET",
+    "headline": "Kreatin Gummies i God & Smidig Förpackning",
+    "lead": "Våra kreatin gummies är skapade för att vara goda och enkla att konsumera, utan att försämra kreatinets positiva effekter eller upptagningsförmåga.",
+    "cta_primary": { "label": "Köp nu", "href": "https://habitual.se/products/kreatin-gummies-vattenmelon" },
+    "cta_secondary": { "label": "Hur fungerar det?", "href": "#hur-det-fungerar" },
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Kreatingummiesvattenmelon.png?v=1776116686",
+    "image_alt": "Habitual Kreatin Monohydrat Gummies"
+  },
+  "stats": [
+    { "value": "1200", "unit": "MG", "label": "Per gummy" },
+    { "value": "120", "unit": "GUMMIES", "label": "Per burk" },
+    { "value": "30-60", "unit": "DOSERINGAR", "label": "Per burk" }
+  ],
+  "features_eyebrow": "FÖRDELARNA",
+  "features_heading": "Varför Kreatin Gummies?",
+  "features_lead": "Ta kreatin gummies dagligen för att uppleva resultat som:",
+  "features": [
+    { "icon": "⚡", "title": "Mer energi", "body": "Öka produktionen av ATP i kroppen för att prestera på topp med maximal energi." },
+    { "icon": "🧠", "title": "Ökat fokus", "body": "Förbättrar kognitiva funktioner som minneskapacitet, fokus och kritiskt tänkande." },
+    { "icon": "💪", "title": "Bättre träningsprestation", "body": "Förbättrar muskelstyrka, uthållighet och mer för optimal träningsprestation." },
+    { "icon": "🛡️", "title": "Stärker allmänhälsan", "body": "Främjar en hälsosam blod-fjärrbarhet, ett starkt immunförsvar, korrekt kroppsfunktion och anti-aging." }
+  ],
+  "research_eyebrow": "FORSKNINGEN BAKOM KREATIN",
+  "research_heading": "Världens mest efterforskade kosttillskott — som faktiskt fungerar!",
+  "research_lead": "Enligt The International Society of Sports Nutrition (ISSN) är kreatinmonohydrat den mest effektiva prestationshöjande kosttillskottet för atleter. Det har visat sig öka kapaciteten för högintensiv träning samt bidra till ökad muskelmassa och styrka i hundratals studier.",
+  "research_stats": [
+    { "value": "80%", "text": "av personer upplever förbättrad träningsprestation efter att de börjat använda kreatin regelbundet." },
+    { "value": "30%", "text": "Flertalet studier visar att kontinuerlig användning av kreatin kan öka muskeltillväxten med 30%, vilket förklarar för muskeltillväxt från 6 månader till 4 månader." },
+    { "value": "15%", "text": "Flera studier indikerar även att Kreatin kan öka det allt maxlyft med 15%." }
+  ],
+  "how_it_works": {
+    "heading": "Funktionen bakom kreatin monohydrat",
+    "body": "Kreatinmonohydrat fungerar genom att öka mängden kreatinfosfat i musklerna (adenosintrifosfat) — den primära energikällan för dina muskler under kortvarig, intensiv träning som lyft, sprint och högintensiv träning. När du tränar förbrukas ATP snabbt, men kreatin hjälper till att återställa dessa nivåer snabbare, vilket ger dig mer energi och kraft under träningen. Det resulterar i ökad styrka, explosivitet och förbättrad uthållighet.",
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Gummies_kreatin_monohydrat_202604200148.jpg?v=1776642531"
+  },
+  "dosering": {
+    "heading": "Så mycket ska du konsumera för maximal effekt",
+    "body": "Varje kvinnliga gummy innehåller 1200 mg kreatinmonohydrat, vilket gör 2-4 tuggisar per dag tillräckligt mycket per dag. Vi rekommenderar denna mängd för att maximera dina prestationer och få maximala fördelar av kreatin för dina träningar."
+  },
+  "faq": {
+    "title": "Alla era frågor besvarade om Kreatin Gummies",
+    "items": [
+      { "q": "Vad är kreatin och vilka är dess fördelar?", "a": "Kreatin är en kemisk förening som naturligt finns i kroppen och i vissa livsmedel. Det hjälper till att producera energi för dina muskler under kortvarig högintensiv träning, vilket leder till ökad styrka, uthållighet och muskelmassa." },
+      { "q": "Hur fungerar Kreatin Gummies jämfört med andra former av kreatin?", "a": "Kreatin Gummies levererar samma kreatinmonohydrat som pulver eller kapslar, men i en god och bekväm tuggisform. Många upplever att gummies är enklare att ta dagligen vilket leder till bättre följsamhet." },
+      { "q": "Behöver jag ladda upptag?", "a": "Nej, det är inte nödvändigt med en laddningsfas. Att ta 2-4 gummies dagligen ger jämn mättnad i musklerna inom 3-4 veckor." },
+      { "q": "Är kreatin gummies säkra att använda dagligen?", "a": "Ja, kreatin är ett av de mest studerade kosttillskotten och säkert vid normal dosering. Drick gott om vatten och rådfråga läkare om du har medicinska tillstånd." },
+      { "q": "När bör jag ta Kreatin Gummies för bästa resultat?", "a": "Timingen är mindre viktig än konsistensen — ta dagligen. Många föredrar att ta dem efter träning eller med en måltid för optimalt upptag." },
+      { "q": "Är Kreatin Gummies veganska?", "a": "Ja, våra Kreatin Gummies är veganska och fria från animaliska ingredienser." },
+      { "q": "Hur länge tar det innan jag märker resultat med Kreatin Gummies?", "a": "De flesta börjar se resultat efter 2-4 veckors konsekvent dagligt intag. Maximala prestationsfördelar uppnås ofta efter 6-8 veckor." }
+    ]
+  }
 }

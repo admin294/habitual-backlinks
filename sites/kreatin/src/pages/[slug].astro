@@ -7,7 +7,6 @@ import path from 'node:path';
 export async function getStaticPaths() {
   const { default: cfg } = await import('../data/site.json');
   const items = [];
-
   const pagesDir = path.resolve('src/content/pages');
   if (fs.existsSync(pagesDir)) {
     for (const file of fs.readdirSync(pagesDir)) {
@@ -15,47 +14,41 @@ export async function getStaticPaths() {
       if (slug === cfg.homepage_content) continue;
       const raw = fs.readFileSync(path.join(pagesDir, file), 'utf-8');
       const fm = raw.match(/^---\n([\s\S]*?)\n---/)?.[1] || '';
-      const title = fm.match(/title:\s*"(.+?)"/)?.[1] || '';
-      const body = raw.split(/^---$/m).slice(2).join('---').trim();
-      items.push({ params: { slug }, props: { title, body, kind: 'page', date: '', excerpt: '' } });
+      items.push({ params: { slug }, props: {
+        title: fm.match(/title:\s*"(.+?)"/)?.[1] || '',
+        body: raw.split(/^---$/m).slice(2).join('---').trim(),
+        kind: 'page', date: '', excerpt: ''
+      }});
     }
   }
-
   const postsDir = path.resolve('src/content/posts');
   if (fs.existsSync(postsDir)) {
     for (const file of fs.readdirSync(postsDir)) {
       const raw = fs.readFileSync(path.join(postsDir, file), 'utf-8');
       const fm = raw.match(/^---\n([\s\S]*?)\n---/)?.[1] || '';
-      const title = fm.match(/title:\s*"(.+?)"/)?.[1] || '';
       const slug = fm.match(/slug:\s*"(.+?)"/)?.[1] || file.replace(/\.md$/, '');
-      const date = fm.match(/date:\s*"(.+?)"/)?.[1] || '';
-      const excerpt = fm.match(/excerpt:\s*"(.+?)"/)?.[1] || '';
-      const body = raw.split(/^---$/m).slice(2).join('---').trim();
-      items.push({ params: { slug }, props: { title, body, kind: 'post', date, excerpt } });
+      items.push({ params: { slug }, props: {
+        title: fm.match(/title:\s*"(.+?)"/)?.[1] || '',
+        body: raw.split(/^---$/m).slice(2).join('---').trim(),
+        kind: 'post',
+        date: fm.match(/date:\s*"(.+?)"/)?.[1] || '',
+        excerpt: fm.match(/excerpt:\s*"(.+?)"/)?.[1] || ''
+      }});
     }
   }
-
   return items;
 }
 
 const { title, body, kind, date, excerpt } = Astro.props;
-const formatDate = (d) => d ? new Date(d).toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
-const dateStr = formatDate(date);
-const slug = Astro.params.slug;
-
-// Read time estimate (200 wpm)
+const dateStr = date ? new Date(date).toLocaleDateString('sv-SE', { year:'numeric', month:'long', day:'numeric' }) : '';
 const wordCount = body.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
 const readTime = Math.max(1, Math.round(wordCount / 200));
+const slug = Astro.params.slug;
 ---
 <Base title={`${title} — ${siteConfig.brand}`} description={excerpt || siteConfig.tagline} slug={`/${slug}`}>
-  <article class="container-narrow article-wrapper" style="padding-top: 3.5rem;">
+  <article class="container-narrow article-wrapper">
     <h1 set:html={title} />
-    {kind === 'post' && (
-      <p class="post-meta">
-        {dateStr && <><time>{dateStr}</time> · </>}
-        <span>{readTime} min läsning</span>
-      </p>
-    )}
+    {kind === 'post' && <p class="post-meta">{dateStr && <><time>{dateStr}</time> · </>}{readTime} min läsning</p>}
     <div set:html={body} />
     <a href="/" class="back-link">← Tillbaka till startsidan</a>
   </article>

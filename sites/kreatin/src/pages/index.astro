@@ -24,15 +24,126 @@ const posts = fs.existsSync(postsDir) ? fs.readdirSync(postsDir).map((file) => {
   };
 }).sort((a, b) => b.date.localeCompare(a.date)) : [];
 
-const formatDate = (d: string) => d ? new Date(d).toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+const { hero, stats, features, features_eyebrow, features_heading, features_lead,
+        research_eyebrow, research_heading, research_lead, research_stats,
+        how_it_works, dosering, faq } = siteConfig;
 ---
 <Base title={`${siteConfig.brand} — ${siteConfig.tagline}`} description={siteConfig.tagline} slug="/">
   <section class="hero">
-    <div class="container-narrow">
-      <h1>{siteConfig.brand}</h1>
-      <p class="lead">{siteConfig.tagline}</p>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="eyebrow">{hero.eyebrow}</div>
+          <h1>{hero.headline}</h1>
+          <p class="lead">{hero.lead}</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href={hero.cta_primary.href}>{hero.cta_primary.label}</a>
+            <a class="btn btn-outline" href={hero.cta_secondary.href}>{hero.cta_secondary.label}</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src={hero.image} alt={hero.image_alt} loading="eager" />
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        {stats.map((s) => (
+          <div class="stat">
+            <div class="value">{s.value}<span class="unit">{s.unit}</span></div>
+            <div class="stat-label">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="hur-det-fungerar">
+    <div class="container">
+      <div class="section-eyebrow">{features_eyebrow}</div>
+      <h2 class="section-heading">{features_heading}</h2>
+      <p class="section-lead">{features_lead}</p>
+      <div class="features-grid">
+        {features.map((f) => (
+          <div class="feature">
+            <div class="icon">{f.icon}</div>
+            <h3>{f.title}</h3>
+            <p>{f.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="research">
+    <div class="container">
+      <div class="research-grid">
+        <div class="research-text">
+          <div class="section-eyebrow">{research_eyebrow}</div>
+          <h2>{research_heading}</h2>
+          <p>{research_lead}</p>
+        </div>
+        <div class="research-stats">
+          {research_stats.map((rs) => (
+            <div class="research-stat">
+              <div class="big-num">{rs.value}</div>
+              <p class="text">{rs.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {how_it_works && (
+    <section class="howitworks">
+      <div class="container">
+        <div class="howitworks-grid">
+          <div class="howitworks-text">
+            <div class="section-eyebrow">HUR DET FUNGERAR</div>
+            <h2>{how_it_works.heading}</h2>
+            <p>{how_it_works.body}</p>
+          </div>
+          <div class="howitworks-image">
+            <img src={how_it_works.image} alt={how_it_works.heading} loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {dosering && (
+    <section class="dosering">
+      <div class="container container-narrow">
+        <div class="section-eyebrow">DOSERING</div>
+        <h2 class="section-heading">{dosering.heading}</h2>
+        <p class="section-lead">{dosering.body}</p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="btn btn-primary" href={hero.cta_primary.href}>Köp Nu</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {faq && faq.items?.length > 0 && (
+    <section class="faq">
+      <div class="container container-narrow">
+        <div class="section-eyebrow">VANLIGA FRÅGOR</div>
+        <h2 class="section-heading">{faq.title}</h2>
+        <div class="faq-list">
+          {faq.items.map((item, i) => (
+            <details class="faq-item" open={i === 0}>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {pageBody && (
     <section class="container-narrow article-wrapper">
@@ -41,25 +152,22 @@ const formatDate = (d: string) => d ? new Date(d).toLocaleDateString('sv-SE', { 
   )}
 
   {posts.length > 0 && (
-    <section class="container">
-      <div class="section-heading">
-        <h2>Senaste artiklarna</h2>
-        <p>Allt vi har skrivit om {siteConfig.brand.toLowerCase()}</p>
+    <section class="posts-section">
+      <div class="container">
+        <div class="section-eyebrow">BLOGGEN</div>
+        <h2 class="section-heading">Senaste artiklarna</h2>
+        <ul class="post-grid">
+          {posts.map((p) => (
+            <li class="post-card">
+              <a href={`/${p.slug}`}>
+                <h3 class="card-title">{p.title}</h3>
+                <p class="card-excerpt">{p.excerpt}</p>
+                <div class="card-meta">Läs mer →</div>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul class="post-grid">
-        {posts.map((p) => (
-          <li class="post-card">
-            <a href={`/${p.slug}`}>
-              <h3 class="card-title">{p.title}</h3>
-              <p class="card-excerpt">{p.excerpt}</p>
-              <div class="card-meta">
-                {p.date && <time>{formatDate(p.date)}</time>}
-                <span class="read-more"> Läs mer →</span>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
     </section>
   )}
 </Base>
