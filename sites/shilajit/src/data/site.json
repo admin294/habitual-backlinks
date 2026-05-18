@@ -94,5 +94,43 @@
       "value": "3000+",
       "text": "års användning i ayurvedisk tradition gör shilajit till en av världens mest beprövade örter."
     }
-  ]
+  ],
+  "how_it_works": {
+    "heading": "Funktionen bakom Shilajit",
+    "body": "Shilajit är ett mineralrikt bergsharts som bildats över miljoner år i Himalayabergen från komprimerad växtmassa. Det innehåller fulvinsyror och humussyror som hjälper kroppen ta upp mineraler effektivare. Den unika sammansättningen av 84 spårmineraler stödjer mitokondriernas energiproduktion (ATP), uthållighet och kognitiv funktion enligt ayurvedisk tradition och modern forskning.",
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Gummies_ra_shilajit_202604200152.jpg?v=1776642757"
+  },
+  "dosering": {
+    "heading": "Så mycket ska du ta för maximal effekt",
+    "body": "Vi rekommenderar 2 gummies dagligen, gärna på morgonen eller före träning. För bästa resultat, ta dagligen i 4-8 veckor. Förvara svalt och torrt."
+  },
+  "faq": {
+    "title": "Alla era frågor besvarade om Shilajit",
+    "items": [
+      {
+        "q": "Vad är shilajit?",
+        "a": "Shilajit är ett mineralrikt bergsharts från Himalaya som bildats över miljoner år från komprimerad växtmassa. Rikt på fulvinsyror och 84 spårmineraler."
+      },
+      {
+        "q": "Hur skiljer sig gummies från resin?",
+        "a": "Gummies är enklare att dosera och har angenäm smak — resin (det rena hartset) är mer koncentrerat men bitter. Båda ger samma nyckelnäring."
+      },
+      {
+        "q": "När märker jag effekten?",
+        "a": "De flesta upplever ökad energi och uthållighet efter 2-4 veckor. Maximal kognitiv effekt brukar märkas efter 6-8 veckor."
+      },
+      {
+        "q": "Är shilajit säkert?",
+        "a": "Vår shilajit testas för tungmetaller och föroreningar. Säkert för vuxna; undvik vid graviditet och rådfråga läkare vid medicinering."
+      },
+      {
+        "q": "Höjer shilajit testosteron?",
+        "a": "Studier visar att shilajit kan stödja naturlig testosteronproduktion hos vuxna män. Effekten är mild — inget ersättningsmedel."
+      },
+      {
+        "q": "Är det veganskt?",
+        "a": "Ja, shilajit är ett mineralharts av växtursprung. Våra gummies är 100% veganska."
+      }
+    ]
+  }
 }

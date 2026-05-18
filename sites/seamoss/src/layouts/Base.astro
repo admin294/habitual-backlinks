@@ -308,6 +308,58 @@ const cta = siteConfig.hero?.cta_primary;
       .site-nav { gap: 1rem; }
       .site-nav a:not(.btn-nav) { display: none; }
     }
+
+    /* How it works section */
+    .howitworks { padding: 5rem 0; }
+    .howitworks-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
+    .howitworks-text .section-eyebrow { text-align: left; }
+    .howitworks-text h2 { text-align: left; font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 1rem; }
+    .howitworks-text p { color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.75; }
+    .howitworks-image img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+    
+    /* Dosering CTA section */
+    .dosering { background: var(--color-bg-warm); padding: 5rem 0; text-align: center; }
+    
+    /* FAQ accordion */
+    .faq { padding: 5rem 0; background: var(--color-bg); }
+    .faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .faq-item {
+      background: var(--color-bg-warm);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+    }
+    .faq-item summary {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      list-style: none;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      color: var(--color-text);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--color-accent);
+      transition: transform 0.2s;
+      font-weight: 400;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      margin: 1rem 0 0;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+    
+    @media (max-width: 780px) {
+      .howitworks-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .howitworks { padding: 3rem 0; }
+      .dosering { padding: 3rem 0; }
+      .faq { padding: 3rem 0; }
+    }
+
   </style>
 </head>
 <body>

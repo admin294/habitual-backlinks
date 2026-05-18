@@ -94,5 +94,43 @@
       "value": "1000+",
       "text": "års dokumenterad användning i irländsk folkmedicin för immunförsvar och hudhälsa."
     }
-  ]
+  ],
+  "how_it_works": {
+    "heading": "Funktionen bakom Sea Moss",
+    "body": "Sea moss (Chondrus crispus) är en rödalg från Atlantens kuster som naturligt innehåller 92 av kroppens 102 mineraler — fler än någon annan landväxt. Den är rik på jod, järn, magnesium, kalium och kalcium. Den traditionella irländska skördemetoden bevarar mineralprofilen och de bioaktiva polysackariderna som stödjer immunförsvar, hudhälsa och matsmältning.",
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Seamossbeigebakgrundmedtorkadseamoss.jpg?v=1777398882"
+  },
+  "dosering": {
+    "heading": "Så mycket ska du ta för maximal effekt",
+    "body": "Vi rekommenderar 2 gummies dagligen, gärna på morgonen. För maximal effekt, ta dagligen i minst 4-8 veckor. Förvara svalt och torrt."
+  },
+  "faq": {
+    "title": "Alla era frågor besvarade om Sea Moss Gummies",
+    "items": [
+      {
+        "q": "Vad är sea moss?",
+        "a": "Sea moss är en rödalg från Atlanten som naturligt innehåller 92 mineraler. Använd i Irland sedan medeltiden som superfood."
+      },
+      {
+        "q": "När märker jag effekten?",
+        "a": "Många känner ökad energi efter 2-3 veckor. Hudförbättringar och immunfunktion brukar visa sig efter 4-8 veckor."
+      },
+      {
+        "q": "Vad är skillnaden mot tabletter?",
+        "a": "Gummies smakar gott och är enklare att ta dagligen. Vår dos motsvarar 1000 mg sea moss extrakt per portion."
+      },
+      {
+        "q": "Är det säkert vid graviditet?",
+        "a": "Konsultera alltid läkare före användning under graviditet eller amning, särskilt på grund av jodinnehållet."
+      },
+      {
+        "q": "Kan jag ta för mycket jod?",
+        "a": "En portion ger en säker mängd jod inom EFSA:s riktlinjer. Överdriven konsumtion av andra jodkällor samtidigt bör undvikas."
+      },
+      {
+        "q": "Är sea moss veganskt?",
+        "a": "Ja, sea moss är en alg och våra gummies är 100% veganska."
+      }
+    ]
+  }
 }

@@ -25,7 +25,8 @@ const posts = fs.existsSync(postsDir) ? fs.readdirSync(postsDir).map((file) => {
 }).sort((a, b) => b.date.localeCompare(a.date)) : [];
 
 const { hero, stats, features, features_eyebrow, features_heading, features_lead,
-        research_eyebrow, research_heading, research_lead, research_stats } = siteConfig;
+        research_eyebrow, research_heading, research_lead, research_stats,
+        how_it_works, dosering, faq } = siteConfig;
 ---
 <Base title={`${siteConfig.brand} — ${siteConfig.tagline}`} description={siteConfig.tagline} slug="/">
   <section class="hero">
@@ -96,6 +97,53 @@ const { hero, stats, features, features_eyebrow, features_heading, features_lead
       </div>
     </div>
   </section>
+
+  {how_it_works && (
+    <section class="howitworks">
+      <div class="container">
+        <div class="howitworks-grid">
+          <div class="howitworks-text">
+            <div class="section-eyebrow">HUR DET FUNGERAR</div>
+            <h2>{how_it_works.heading}</h2>
+            <p>{how_it_works.body}</p>
+          </div>
+          <div class="howitworks-image">
+            <img src={how_it_works.image} alt={how_it_works.heading} loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {dosering && (
+    <section class="dosering">
+      <div class="container container-narrow">
+        <div class="section-eyebrow">DOSERING</div>
+        <h2 class="section-heading">{dosering.heading}</h2>
+        <p class="section-lead">{dosering.body}</p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="btn btn-primary" href={hero.cta_primary.href}>Köp Nu</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {faq && faq.items?.length > 0 && (
+    <section class="faq">
+      <div class="container container-narrow">
+        <div class="section-eyebrow">VANLIGA FRÅGOR</div>
+        <h2 class="section-heading">{faq.title}</h2>
+        <div class="faq-list">
+          {faq.items.map((item, i) => (
+            <details class="faq-item" open={i === 0}>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {pageBody && (
     <section class="container-narrow article-wrapper">

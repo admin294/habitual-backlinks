@@ -94,5 +94,43 @@
       "value": "3000+",
       "text": "års användning i ayurveda gör ashwagandha till en av världens mest validerade örter."
     }
-  ]
+  ],
+  "how_it_works": {
+    "heading": "Funktionen bakom Ashwagandha",
+    "body": "Ashwagandha (Withania somnifera) är en adaptogen — en växt som hjälper kroppen att hantera stress utan att skapa beroende. Aktiva komponenter heter withanolider och påverkar HPA-axeln (hypothalamus-hypofys-binjure-axeln) som styr stresshormonet kortisol. KSM-66 är den mest kliniskt studerade extrakten, framställd genom 14 dagars vatten-baserad extraktion av roten utan kemiska lösningsmedel.",
+    "image": "https://cdn.shopify.com/s/files/1/0757/3100/9803/files/Gummies_ingredients_raw_202604200146.jpg?v=1776642397"
+  },
+  "dosering": {
+    "heading": "Så mycket ska du ta för maximal effekt",
+    "body": "Vi rekommenderar 1-2 gummies dagligen, oftast med mat på morgonen eller kvällen. Konsekvent dagligt intag i minst 4-8 veckor ger tydligast resultat enligt forskningen. Förvara på sval, torr plats."
+  },
+  "faq": {
+    "title": "Alla era frågor besvarade om Ashwagandha Gummies",
+    "items": [
+      {
+        "q": "Vad är Ashwagandha?",
+        "a": "Ashwagandha är en ayurvedisk adaptogen som använts i över 3 000 år. Den hjälper kroppen att hantera stress, stödjer sömn och bidrar till en lugnare nervsystem."
+      },
+      {
+        "q": "När kommer jag märka effekten?",
+        "a": "De flesta märker en lugnare känsla inom 1-2 veckor. Maximala effekter på stress och sömn kommer ofta efter 4-8 veckors dagligt intag."
+      },
+      {
+        "q": "Vilken dos är bäst?",
+        "a": "1-2 gummies (300-600 mg KSM-66) dagligen är den mest studerade dosen. Ta med mat för bästa upptag."
+      },
+      {
+        "q": "Är ashwagandha säkert?",
+        "a": "Ja, för de allra flesta. Undvik om du är gravid, ammar eller tar sköldkörtelmedicin. Kontakta läkare vid osäkerhet."
+      },
+      {
+        "q": "Gör ashwagandha mig trött?",
+        "a": "Nej, ashwagandha är inte ett lugnande medel. Det hjälper kroppen reglera stress, vilket ofta upplevs som bättre fokus dagtid och djupare sömn nattetid."
+      },
+      {
+        "q": "Kan jag kombinera med andra tillskott?",
+        "a": "Ja, ashwagandha kombineras bra med magnesium, L-teanin och B-vitaminer. Tala med läkare om du tar receptbelagda mediciner."
+      }
+    ]
+  }
 }
