@@ -21,6 +21,7 @@ const cta = siteConfig.hero?.cta_primary;
   <meta property="og:type" content="website" />
   {siteConfig.hero?.image && <meta property="og:image" content={siteConfig.hero.image} />}
   <title>{title}</title>
+  {siteConfig.favicon && <link rel="icon" type="image/png" href={siteConfig.favicon} />}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
